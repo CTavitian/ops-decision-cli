@@ -1,0 +1,72 @@
+jobs:
+  - id: defect-triage-draft
+    name: Draft defect triage notes
+    description: Summarise inbound defect reports into structured fields for a supervisor.
+    compliance_risk: 1
+    data_quality: 3
+    human_in_loop_need: 1
+    irreversibility: 0
+    statutory: false
+
+  - id: schedule-suggest
+    name: Suggest crew schedule windows
+    description: Propose windows from priority and travel; humans confirm.
+    compliance_risk: 1
+    data_quality: 2
+    human_in_loop_need: 2
+    irreversibility: 1
+    statutory: false
+
+  - id: auto-close-afss
+    name: Auto-close AFSS paperwork
+    description: Mark annual fire safety statements complete without review.
+    compliance_risk: 3
+    data_quality: 2
+    human_in_loop_need: 3
+    irreversibility: 3
+    statutory: true
+
+  - id: quote-first-pass
+    name: First-pass quote line items
+    description: Draft BOQ lines from past jobs; estimator approves.
+    compliance_risk: 1
+    data_quality: 2
+    human_in_loop_need: 2
+    irreversibility: 1
+    statutory: false
+
+  - id: customer-sms-blast
+    name: Unsupervised customer SMS
+    description: Send status SMS to all open jobs without a human check.
+    compliance_risk: 2
+    data_quality: 1
+    human_in_loop_need: 1
+    irreversibility: 2
+    statutory: false
+
+  - id: parts-reorder-hint
+    name: Parts reorder hints
+    description: Flag likely stock-outs from usage history.
+    compliance_risk: 0
+    data_quality: 3
+    human_in_loop_need: 1
+    irreversibility: 0
+    statutory: false
+
+  - id: licence-gate-bypass
+    name: Bypass licence check on dispatch
+    description: Allow dispatch when licence flags are missing.
+    compliance_risk: 3
+    data_quality: 1
+    human_in_loop_need: 3
+    irreversibility: 3
+    statutory: true
+
+  - id: weekly-ops-digest
+    name: Weekly ops digest
+    description: Compile KPI digests from existing reports for managers.
+    compliance_risk: 0
+    data_quality: 3
+    human_in_loop_need: 0
+    irreversibility: 0
+    statutory: false
